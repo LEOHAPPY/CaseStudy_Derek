@@ -20,7 +20,7 @@
     <div>
     
     </div>
-        <asp:Login ID="Login1" runat="server" CssClass="auto-style1" style="z-index: 1" DestinationPageUrl="~/Prv/LogedPage.aspx">
+        <asp:Login ID="Login1" runat="server" CssClass="auto-style1" style="z-index: 1" DestinationPageUrl="~/Prv/AddPage.aspx">
         </asp:Login>
     </form>
 </body>

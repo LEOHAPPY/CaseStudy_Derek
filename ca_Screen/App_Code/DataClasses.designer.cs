@@ -35,7 +35,7 @@ public partial class DataClassesDataContext : System.Data.Linq.DataContext
   #endregion
 	
 	public DataClassesDataContext() : 
-			base(global::System.Configuration.ConfigurationManager.ConnectionStrings["MaisonExpertDataConnectionString"].ConnectionString, mappingSource)
+			base(global::System.Configuration.ConfigurationManager.ConnectionStrings["MaisonExpertDataConnectionString1"].ConnectionString, mappingSource)
 	{
 		OnCreated();
 	}

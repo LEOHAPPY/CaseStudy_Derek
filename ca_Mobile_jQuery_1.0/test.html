@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    
+    <style>
+        img.fullscreen{
+            max-width: 100%;
+            max-width: 100%;
+            
+        }
+    </style>
+</head>
+<body>
+    
+<!-- firstPage -->
+<div data-role="page" id="firstPage">
+    
+
+  <div data-role="header" data-position="fixed">
+    <h1>EXPERTMISION</h1>
+    <a href="#overlayPanel" class="ui-btn ui-btn-inline ui-corner-all ui-icon-grid ui-btn-icon-notext">content</a>
+  </div>
+  
+  <div data-role="main" class="ui-content">
+      
+      <!-- property listview -->
+    <ul data-role="listview" data-inset="true" data-filter="true">
+      <li data-role="divider">Properties</li>
+        <!-- click goto proDetails -->
+      <li>
+        <a href="#proDetails">
+        <img src="image/IMG_20150804_223125_1438788115879.jpeg">
+        <h2>HDB Farrel Road</h2>
+        <p>Price:S$100,000</p>    
+        <p>PSF:100 m2</p>
+        </a>
+      </li>
+      
+      <li>
+        <a href="#proDetails">
+        <img src="image/DSC_0492.jpeg">
+        <h2>Apartment King Road</h2>
+        <p>Price:S$200,000</p>    
+        <p>PSF:200 m2</p>
+        </a>
+      </li>
+    </ul>
+      
+      <!-- add a Panel (type: overlay/reveal/push) -->
+  <div data-role="panel" id="overlayPanel" data-display="overlay">
+    <!-- content in the panel -->
+      
+    <!--when without login --> 
+    <!-- <div data-role="controlgroup" data-type="vertical">
+          click and go to main page 
+      <a href="#" class="ui-btn ui-icon-home ui-btn-icon-notext">Home</a>
+      <a href="#login" data-rel="popup" class="ui-btn">Login</a>
+      <a href="#signup" data-rel="popup" class="ui-btn">Sign Up</a>
+    </div>-->
+      
+    <!--when login -->  
+    <div data-role="controlgroup" data-type="vertical">
+         <!-- click and go to main page -->
+      <a href="#" class="ui-btn ui-icon-home ui-btn-icon-notext">Home</a>
+      <a href="#" class="ui-btn">leo</a>
+      <a href="#myProperties" class="ui-btn">My Property</a>
+      <a href="#" class="ui-btn">Flavor</a>     
+      <a href="#" class="ui-btn">Recent</a>
+      <a href="#" class="ui-btn">Sign Out</a>
+    </div>
+  </div>
+  
+    <!--login popup window -->
+    <div data-role="popup" id="login" class="ui-content" style="min-width:250px" data-position-to="window" data-transition="fade" data-overlay-theme="b">
+     <!-- login form -->
+        <form method="post" action="demoform.asp">
+        <div>
+          <h3>Login information</h3>
+          <label for="usrnm" class="ui-hidden-accessible">Username:</label>
+          <input type="text" name="user" id="usrnm" placeholder="Username">
+          <label for="pswd" class="ui-hidden-accessible">Password:</label>
+          <input type="password" name="passw" id="pswd" placeholder="Password">
+          <label for="log">Keep me logged in</label>
+          <input type="checkbox" name="login" id="log" value="1" data-mini="true">
+          <input type="submit" data-inline="true" value="Log in">
+        </div>
+      </form>
+    </div>
+   
+    <!--signup popup window -->
+    <div data-role="popup" id="signup" class="ui-content" style="min-width:250px" data-position-to="window" data-transition="fade" data-overlay-theme="b">
+      <form method="post" action="demoform.asp">
+        <div>
+          <h3>Login information</h3>
+          <label for="usrnm" class="ui-hidden-accessible">Username:</label>
+          <input type="text" name="user" id="usrnm" placeholder="Username">
+          <label for="pswd" class="ui-hidden-accessible">Password:</label>
+          <input type="password" name="passw" id="pswd" placeholder="Password">
+          <label for="log">Keep me logged in</label>
+          <input type="checkbox" name="login" id="log" value="1" data-mini="true">
+          <input type="submit" data-inline="true" value="Log in">
+        </div>
+      </form>
+    </div>
+      
+  </div>
+
+  <div data-role="footer" >
+    <h1>Page Footer</h1>
+  </div>
+</div>
+    
+<!-- proDetails Page -->
+<div data-role="page" id="proDetails">
+  
+  <div data-role="header" data-position="fixed">
+    <h1>Property Details</h1>
+    <a href="#firstPage" class="ui-btn ui-btn-inline   ui-corner-all ui-icon-grid ui-btn-icon-notext">content</a>
+    <a href="#" class="ui-btn ui-btn-inline   ui-corner-all ui-icon-arrow-l ui-btn-icon-notext" data-rel="back">arrowLeft</a> 
+  </div>
+  <div data-role="main" class="ui-content">
+     <img src="image/IMG_20150804_223125_1438788115879.jpeg" class="fullscreen" alt="happy holiday workshop" />
+      <h2>HDB Farrel Road</h2>
+      <h2>Price: S$100,000</h2>
+      
+      <div data-role="collapsibleset">
+      <div data-role="collapsible">
+        <h3>Details</h3>
+            <table data-role="table" class="ui-responsive">
+              <thead>
+                <tr>
+                  <th>Type</th>
+                  <th>PSF</th>
+                  <th>Bedroom</th>
+                  <th>Bathroom</th>
+                  <th>Address</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Alfreds </td>
+                  <td>Maria Anders</td>
+                  <td>Obere Str. 57</td>
+                  <td>Berlin</td>
+                  <td>12209</td>
+                </tr>
+              </tbody>
+            </table>
+      </div>
+      <div data-role="collapsible">
+        <h3>Description</h3>
+        <p>Tsfssdfasfasdfhe NES Classic Edition system is a miniaturized version of the groundbreaking NES, originally released in 1985.Just plug the NES Classic Edition into your TV, pick up that gray controller, and rediscover the joy of NES games.</p>
+      </div>
+      <div data-role="collapsible">
+        <h3>Owner Info</h3>
+        <img src="image/icon.png"/> 
+        <h3>LEO</h3>  
+        <h4>Tel: 83864353</h4>
+        <h4>Email: leochao@gmail.com</h4>
+          
+      </div>
+    </div>
+  </div>
+    
+  <div data-role="footer" >
+    <h1>Page Footer</h1>
+  </div>
+</div>
+
+<!-- loged Page -->
+<div data-role="page" id="loged">
+    
+
+  <div data-role="header" data-position="fixed">
+    <h1>EXPERTMISION</h1>
+    <a href="#overlayPanel" class="ui-btn ui-btn-inline ui-corner-all ui-icon-grid ui-btn-icon-notext">content</a>
+  </div>
+  
+  <div data-role="main" class="ui-content">
+      
+      <!-- property listview -->
+    <ul data-role="listview" data-inset="true" data-filter="true">
+      <li data-role="divider">Properties</li>
+        <!-- click goto proDetails -->
+      <li>
+        <a href="#proDetails">
+        <img src="image/DSC_0376.JPG">
+        <h2>HDB Farrel Road</h2>
+        <p>Price:S$100,000</p>    
+        <p>PSF:100 m2</p>
+        </a>
+      </li>
+      
+      <li>
+        <a href="#proDetails">
+        <img src="image/DSC_0471.JPG">
+        <h2>Apartment King Road</h2>
+        <p>Price:S$200,000</p>    
+        <p>PSF:200 m2</p>
+        </a>
+      </li>
+    </ul>
+      
+      <!-- add a Panel (type: overlay/reveal/push) -->
+  <div data-role="panel" id="overlayPanel" data-display="overlay">
+      <!-- content in the panel -->
+      <!-- need to become more tidy -->
+     <div data-role="controlgroup" data-type="vertical">
+         <!-- click and go to main page -->
+      <a href="#" class="ui-btn ui-icon-home ui-btn-icon-notext">Home</a>
+      <a href="#" class="ui-btn">leo</a>
+      <a href="#myProperties" class="ui-btn">My Property</a>
+      <a href="#" class="ui-btn">Flavor</a>     
+      <a href="#" class="ui-btn">Recent</a>
+      <a href="#" class="ui-btn">Sign Out</a>
+    </div>
+  </div>
+  
+    <!--login popup window -->
+    <div data-role="popup" id="login" class="ui-content" style="min-width:250px" data-position-to="window" data-transition="fade" data-overlay-theme="b">
+
+      
+  </div>
+
+  <div data-role="footer" >
+    <h1>Page Footer</h1>
+  </div>
+</div>    
+</div>    
+
+<!-- myProperties Page-->
+<div data-role="page" id="myProperties">
+  <div data-role="header" data-position="fixed">
+    <h1>EXPERTMISION</h1>
+    <a href="#overlayPanel" class="ui-btn ui-btn-inline ui-corner-all ui-icon-grid ui-btn-icon-notext">content</a>
+	<a href="#addPro" class="ui-btn-right">Add</a>
+	
+	<div class="ui-content">
+  		
+    </div>
+  </div>
+</div>
+    
+<!-- modifyPro Page-->
+<div data-role="page" id="modifyPro">
+    
+</div>
+    
+<!-- addPro Page-->
+<div data-role="page" id="addPro">
+    
+</div> 
+    
+</body>
+</html>
+
